@@ -304,7 +304,8 @@
           </div>
           <a href="tel:4104492323" class="btn btn-primary btn-full">Call 410-449-2323</a>
         </div>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xlgzberr" method="POST">
+          <input type="hidden" name="_subject" value="New Appointment Request — Waldorf Notary" />
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Full Name" required />
@@ -314,6 +315,10 @@
             <input type="tel" id="phone" name="phone" placeholder="(410) 000-0000" required />
           </div>
           <div class="form-group">
+            <label for="email">Email <span class="label-optional">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
             <label for="doctype">Document Type</label>
             <input type="text" id="doctype" name="doctype" placeholder="e.g., Power of Attorney, Affidavit" />
           </div>
@@ -321,6 +326,7 @@
             <label for="message">Additional Details</label>
             <textarea id="message" name="message" rows="4" placeholder="Preferred date/time, location, or any other details..."></textarea>
           </div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
           <button type="submit" class="btn btn-primary btn-full">Request Appointment</button>
           <p class="form-note">We'll contact you shortly to confirm your appointment.</p>
         </form>
